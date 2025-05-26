@@ -1,0 +1,224 @@
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #007bff;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Container for content */
+.container {
+    max-width: 900px;
+    margin: 80px auto; /* Adjust margin for spacing below the fixed nav */
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Align form to the left */
+    width: 100%;
+}
+
+/* Heading Styles */
+h1, h2, h3 {
+    color: #007bff;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 22px;
+    color: #333;
+}
+
+/* Center button container */
+.center-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Button styles */
+input[type="submit"], .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover, .btn:hover {
+    background-color: #0056b3;
+}
+
+input[type="submit"]:active, .btn:active {
+    background-color: #003d7a;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Form Group Inline Style */
+.form-inline {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start; /* Align the items to the left */
+    flex-wrap: wrap;
+}
+
+.form-inline .form-group {
+    flex: 1;
+    min-width: 220px;
+}
+
+form label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, select, textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Input field focus style */
+input:focus, select:focus, textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Hover and Focus Effects */
+input[type="submit"]:hover, .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Link Styles */
+a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Additional Styling for Result Box */
+.result-box {
+    background-color: #e9f7fe;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.result-box h3 {
+    font-size: 24px;
+}
+
+.result-box p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .result-box {
+        padding: 15px;
+    }
+
+    /* Adjust for smaller screens: stack form fields */
+    .form-inline {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .form-inline .form-group {
+        flex: none;
+        width: 100%;
+    }
+}

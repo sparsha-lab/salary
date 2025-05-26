@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Salary Predictor - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/index" class="active">Home</a></li>
+            <li><a href="/about" >About</a></li>
+            <li><a href="/predict">Predict</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Welcome to the Salary Predictor</h1>
+        <p>This tool helps you estimate your salary based on your experience, education, and more.</p>
+        <div class="center-btn">
+            <a href="{{ url_for('predict') }}" class="btn">Start Prediction</a>
+        </div>
+    </div>
+</body>
+</html>
