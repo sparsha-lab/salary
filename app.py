@@ -1,4 +1,4 @@
-from flask import Flask,render_template,request
+from flask import Flask,render_template,request,redirect,flash
 import pickle
 
 app=Flask(__name__)
@@ -68,5 +68,18 @@ def predict():
 @app.route("/contact",methods=["GET"])
 def contact():
     return render_template("contact.html")
+    app.secret_key = 'your_secret_key'
+@app.route('/submit_contact', methods=['POST'])
+def submit_contact():
+    name = request.form.get('name')
+    email = request.form.get("email")
+    message = request.form.get('message')
+
+    # You can log, save, or email this info
+    print(f"Contact Form Submission:\nName: {name}\nemail: {email}\nMessage: {message}")
+
+    # Show success message
+    flash("Message sent successfully!", "success")
+    return redirect('/contact')
 if __name__=="__main__":
     app.run(debug=True,host='0.0.0.0',port=8000)
