@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Salary Predictor - Home</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Salary Predictor - Home</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="/index" class="active">Home</a></li>
-            <li><a href="/about" >About</a></li>
-            <li><a href="/predict">Predict</a></li>
-            <li><a href="/contact">Contact</a></li>
-        </ul>
-    </nav>
-    <div class="container">
-        <h1>Welcome to the Salary Predictor</h1>
-        <p>This tool helps you estimate your salary based on your experience, education, and more.</p>
-        <div class="center-btn">
-            <a href="{{ url_for('predict') }}" class="btn">Start Prediction</a>
-        </div>
+  <nav>
+    <div class="logo">Salary Predictor</div>
+    <ul>
+      <li><a href="/index" class="active">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/predict">Predict</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Accurately Estimate Your Salary</h1>
+      <p>Use AI-powered insights to get a personalized salary prediction based on your profile.</p>
+      <a href="/predict" class="btn-primary">Start Predicting</a>
     </div>
+  </header>
+
+  <footer>
+    <p>© 2025 Salary Predictor. All rights reserved.</p>
+  </footer>
 </body>
 </html>
