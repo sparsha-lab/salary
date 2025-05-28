@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Salary Predictor - About</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Salary Predictor - About</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
 </head>
 <body>
-    <nav>
-        <ul>
-                <li><a href="/index">Home</a></li>
-                <li><a href="/about" class="active">About</a></li>
-                <li><a href="/predict">Predict Salary</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-    </nav>
-    <div class="container">
-        <h2>About the Project</h2>
-        <p>This web application predicts your estimated salary using a machine learning model trained on historical job data.</p>
-        <p>Built as part of a portfolio/data science project.</p>
-    </div>
+  <nav>
+    <div class="logo">Salary Predictor</div>
+    <ul>
+      <li><a href="/index">Home</a></li>
+      <li><a href="/about" class="active">About</a></li>
+      <li><a href="/predict">Predict</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <h2>About This Project</h2>
+    <p>
+      Our salary prediction tool uses advanced machine learning models trained on real-world job market data to estimate your expected salary.
+    </p>
+    <p>
+      Built with Flask and Scikit-learn, this application is designed for both learning and showcasing data science capabilities.
+    </p>
+  </main>
+
+  <footer>
+    <p>© 2025 Salary Predictor. All rights reserved.</p>
+  </footer>
 </body>
 </html>
