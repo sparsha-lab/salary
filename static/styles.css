@@ -1,224 +1,257 @@
-/* Global styles */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Navigation Bar */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navigation */
 nav {
-    background-color: #007bff;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    position: fixed;
-    top: 0;
+  background: #0a3d62;
+  color: #fff;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+nav .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
 }
 
-nav ul li {
-    margin: 0 20px;
+nav ul li a {
+  color: #d1d8e0;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 15px;
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
+nav ul li a:hover {
+  background: #60a3bc;
+  color: white;
 }
 
-nav a:hover {
-    text-decoration: underline;
+nav ul li a.active {
+  background: #1e3799;
+  color: white;
 }
 
-/* Container for content */
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #60a3bc, #3c6382);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 800;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: #0a3d62;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  box-shadow: 0 5px 15px rgba(10,61,98,0.4);
+}
+
+.btn-primary:hover {
+  background: #1e3799;
+  box-shadow: 0 8px 20px rgba(30,55,153,0.7);
+}
+
+/* Container for main content */
 .container {
-    max-width: 900px;
-    margin: 80px auto; /* Adjust margin for spacing below the fixed nav */
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    text-align: left; /* Align form to the left */
-    width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+  background: white;
+  padding: 40px 50px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-/* Heading Styles */
-h1, h2, h3 {
-    color: #007bff;
+/* Headings inside container */
+.container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #0a3d62;
+  font-weight: 700;
+  border-bottom: 3px solid #60a3bc;
+  padding-bottom: 10px;
 }
 
-h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
+/* Paragraph styling */
+.container p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #555;
 }
 
-h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
+/* Contact form */
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #0a3d62;
 }
 
-h3 {
-    font-size: 22px;
-    color: #333;
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="number"],
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 2px solid #d1d8e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
 }
 
-/* Center button container */
-.center-btn {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form input[type="number"]:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: #60a3bc;
+  outline: none;
+  box-shadow: 0 0 6px #60a3bc;
 }
 
-/* Button styles */
-input[type="submit"], .btn {
-    background-color: #007bff;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 6px;
-    font-size: 16px;
-    text-align: center;
-    transition: background-color 0.3s ease;
+/* Submit button */
+.contact-form button,
+.container input[type="submit"] {
+  background: #0a3d62;
+  color: white;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(10,61,98,0.4);
 }
 
-input[type="submit"]:hover, .btn:hover {
-    background-color: #0056b3;
+.contact-form button:hover,
+.container input[type="submit"]:hover {
+  background: #1e3799;
+  box-shadow: 0 8px 20px rgba(30,55,153,0.7);
 }
 
-input[type="submit"]:active, .btn:active {
-    background-color: #003d7a;
+/* Footer */
+footer {
+  background: #0a3d62;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 0.9rem;
+  margin-top: auto;
 }
 
-/* Form styles */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-/* Form Group Inline Style */
-.form-inline {
-    display: flex;
-    gap: 20px;
-    justify-content: flex-start; /* Align the items to the left */
-    flex-wrap: wrap;
-}
-
-.form-inline .form-group {
-    flex: 1;
-    min-width: 220px;
-}
-
+/* Predict page form labels and inputs */
 form label {
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 5px;
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #0a3d62;
 }
 
-input, select, textarea {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 16px;
-    width: 100%;
-    box-sizing: border-box;
+form input[type="number"],
+form input[type="text"],
+form select {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 2px solid #d1d8e0;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
 }
 
-textarea {
-    resize: vertical;
+form input[type="number"]:focus,
+form input[type="text"]:focus,
+form select:focus {
+  border-color: #60a3bc;
+  outline: none;
+  box-shadow: 0 0 6px #60a3bc;
 }
 
-/* Input field focus style */
-input:focus, select:focus, textarea:focus {
-    border-color: #007bff;
-    outline: none;
+/* Input submit button */
+form input[type="submit"] {
+  margin-top: 25px;
+  width: 100%;
+  font-weight: 700;
 }
 
-/* Hover and Focus Effects */
-input[type="submit"]:hover, .btn:hover {
-    background-color: #0056b3;
-}
-
-/* Link Styles */
-a {
-    text-decoration: none;
-    color: #007bff;
-    font-size: 16px;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Additional Styling for Result Box */
-.result-box {
-    background-color: #e9f7fe;
-    padding: 20px;
-    border-radius: 8px;
-    margin-top: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.result-box h3 {
-    font-size: 24px;
-}
-
-.result-box p {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-/* Media Query for Responsiveness */
+/* Responsive */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .container {
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 28px;
-    }
-
-    h2 {
-        font-size: 22px;
-    }
-
-    .result-box {
-        padding: 15px;
-    }
-
-    /* Adjust for smaller screens: stack form fields */
-    .form-inline {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .form-inline .form-group {
-        flex: none;
-        width: 100%;
-    }
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav ul {
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  .hero {
+    padding: 60px 20px;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .container {
+    margin: 30px 20px;
+    padding: 30px 25px;
+  }
 }
